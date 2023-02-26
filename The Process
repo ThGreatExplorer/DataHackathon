@@ -20,27 +20,13 @@ sentences used. Project Gutenberg organizes books with an Book ID, so in additio
 Book ID was added in parentheses next to the title.
 
 
+Then, we looked through academically-reviewed sources to take lists of words that would include biased
+and unbiased words that the AI can be trained on. This model took great inspiration from the WEAT test shown in:
+https://developers.googleblog.com/2018/04/text-embedding-models-contain-bias.html 
 
-—-----------------------------------------------------------------------------------------------------
-Markdown tips
-Text formatting
-## Headline
-**bold**
-_ italics _
 
-## Inspiration
-
-**Inspired by the human biases in translation**, specifically how translator's bias could affect the meaning and interpretation of books and the original author's intention. We decided to create our project on the idea of 
-
-## What it does
-
-## How we built it
-
-We first curated our own dataset of biased and unbiased books based on 
-
-## Challenges we ran into
-
-One challenge that influenced the progress of our project was the parsing of data and data format such that vector sizes and input shapes could be standardized so that WEAT analysis could be performed.
+One challenge that influenced the progress of our project was the parsing of data and data format 
+such that vector sizes and input shapes could be standardized so that WEAT analysis could be performed.
 
 ## Accomplishments that we're proud of
 
@@ -51,5 +37,7 @@ One challenge that influenced the progress of our project was the parsing of dat
 
 ## What we learned
 
-## What's next for WEAT Analysis of Bias Correction in W2V & NLP algorithms
+How to make an AI and use a targeted words and language processing to determine bias.
+
+
 
