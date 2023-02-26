@@ -1,0 +1,43 @@
+When we were contemplating the possible issues we could tackle with AI ethics we landed
+on many ideas. However, we felt the topic of bias in human translation vs. AI translation 
+was an issue that is not as widely known while posing threats of large magnitude particularly 
+in academia. As we knew, the way language is used has a major impact on the message being delivered
+and wanted to see how much bias AI translators apply to texts. The first book we settled on using 
+was the Bible, which has multiple translations, but realized that the original message of the Bible 
+has been interpreted and translated in many ways so it would be difficult to decide which version
+was the “unbiased” version. We thought that there was a possibility to find a “common ground”
+message in all the translations of the Bible as a baseline, but it would not be feasible to 
+create or be of much use. However, thinking about these challenges enforced our understanding of
+how every word matters. Eventually, we settled on determining the bias of certain words by creating
+and using a natural language processor.
+
+
+
+One of the tools heavily used was Project Gutenberg which provided a large database of books that could
+be imported into python. We organized books in such a way that they fit in biased or unbiased. We catergorized
+books in the biased section if there were racist, sexist, or had any other type of discriminatory words or
+sentences used. Project Gutenberg organizes books with an Book ID, so in addition to the book titles the
+Book ID was added in parentheses next to the title.
+
+
+Then, we looked through academically-reviewed sources to take lists of words that would include biased
+and unbiased words that the AI can be trained on. This model took great inspiration from the WEAT test shown in:
+https://developers.googleblog.com/2018/04/text-embedding-models-contain-bias.html 
+
+
+One challenge that influenced the progress of our project was the parsing of data and data format 
+such that vector sizes and input shapes could be standardized so that WEAT analysis could be performed.
+
+## Accomplishments that we're proud of
+
+- curated own dataset of 40+ books, labeled 0 for unbias and 1 for bias
+- created own Word2Vec model based on bias and unbiased samples and mapped word embeddings
+- implemented a hard-coded WEAT analysis algorithm with a standard word sample of target and attribute words that outputs a metric for bias
+- compared against benchmark of the  
+
+## What we learned
+
+How to make an AI and use a targeted words and language processing to determine bias.
+
+
+
