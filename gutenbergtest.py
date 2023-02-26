@@ -14,4 +14,10 @@ cleaned_book, raw_book = usage_example()
 print(f'Example phrase from the cleaned book: {" ".join(str(cleaned_book[3000:3050]).split(" "))}')
 
 # Raw Book
-print(f'Example phrase from the raw book: {" ".join(str(raw_book).split(" "))}')
+# print(f'Example phrase from the raw book: {" ".join(str(raw_book).split(" "))}')
+
+#with open("cleaned_book.txt",  "w", encoding="utf-8") as file:
+#    file.write(cleaned_book.decode())
+
+
+
