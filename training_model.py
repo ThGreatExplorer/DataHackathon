@@ -64,14 +64,13 @@ model = Word2Vec(sentences=[all_words], vector_size=100, min_count=1, workers=4)
 
 vector = model.wv["black"]
 
-# Convert the word vector to a numpy array
-vector = np.asarray(vector)
-
-# Create a pandas DataFrame with the word vector
-df = pd.DataFrame(vector)
-
-# Export the DataFrame to a CSV file
-df.to_csv('black_vector.csv', index=False, header=False)
+# Export the vectors to a CSV file
+with open("trainedmodel_word_vectors.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Word", "Vector"])
+    for word in model.wv.index_to_key:
+        vector = model.wv[word]
+        writer.writerow([word, ",".join([str(x) for x in vector])])
 
 '''
 # Get the vocabulary and the word vectors
