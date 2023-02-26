@@ -17,5 +17,5 @@ word_list = processed_book.split()
 model = Word2Vec(sentences=[word_list], vector_size=100, min_count=1, workers=4)
 
 # Get the vector representation of a word
-vector = model.wv["Moby"]
-print(vector)
+similar_words = model.wv.most_similar('Dick', topn=10)
+print(similar_words)
