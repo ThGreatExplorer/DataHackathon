@@ -19,8 +19,19 @@ books in the biased section if there were racist, sexist, or had any other type 
 sentences used. Project Gutenberg organizes books with an Book ID, so in addition to the book titles the
 Book ID was added in parentheses next to the title.
 
+When it came to the WEAT calculation we found an online database for positive/negative associated words to use as the "Attribute Word" sets.
+Next, we used the previous Word2Vec models to get csv files which included every word in the source text along with 100 word embeddings.
+Using the source text csv file we extracted an array of all the target words we would be testing contained in the source text along with
+their vectors. Using this array along with the vectors of all the positive/negative words contained in the source text we plugged these
+arrays into the WEAT equation which took the cosine similarities of the different sets along with the standard deviation of those 
+cosine similarities to get a WEAT score, a value between 2 and -2 which represented if the target words had a positive
+or negative connotation in the source material. Ideally with this method we would be able to test different target word groups,
+such as words connected with women, men, race, or politics and then use the WEAT score to determine if those word sets had
+positive or negative connotations in the source text. Furthermore, by comparing these scores in situations such as translation, doing
+the test on a machine translation and a human translation of the same text, we could find whether the machine or human translations
+are more biased and where these biases are the same or different. 
 
-Then, we looked through academically-reviewed sources to take lists of words that would include biased
+To find a useful sets of target words, we looked through academically-reviewed sources to take lists of words that would include biased
 and unbiased words that the AI can be trained on. This model took great inspiration from the WEAT test shown in:
 https://developers.googleblog.com/2018/04/text-embedding-models-contain-bias.html 
 
@@ -37,7 +48,7 @@ such that vector sizes and input shapes could be standardized so that WEAT analy
 
 ## What we learned
 
-How to make an AI and use a targeted words and language processing to determine bias.
+How to make an AI and use targeted words and language processing to determine bias in a source material using WEAT score.
 
 
 
