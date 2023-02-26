@@ -1,4 +1,5 @@
 from gensim.models import Word2Vec
+import csv
 
 # TODO: Replace this with the dataset library
 corpus = [["the", "quick", "brown", "fox"], ["jumped", "over", "the", "lazy", "dog"]]
@@ -28,3 +29,5 @@ model.train(corpus, total_examples=model.corpus_count, epochs=10)
 # Get the vector representation of a word
 vector = model.wv["fox"]
 print(vector)
+
+model.wv.save_word2vec_format('my_model.txt', binary=False)
