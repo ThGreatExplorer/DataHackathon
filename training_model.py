@@ -12,6 +12,7 @@ import pandas as pd
 import numpy as np
 
 # downloads stopwords
+# run this the first time you run this program and then comment out again
 # nltk.download('stopwords')
 # nltk.download('wordnet')
 

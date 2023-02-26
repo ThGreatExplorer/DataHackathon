@@ -3,8 +3,8 @@ import gutenbergpy.textget
 import pandas as pd
 
 # Define the paths to the biased and unbiased book ID files
-biased_file = 'Training_biased'
-unbiased_file = 'Training_unbiased'
+biased_file = 'Data/Training_biased'
+unbiased_file = 'Data/Training_unbiased'
 
 # Read in the book IDs from the biased and unbiased files
 with open(biased_file, 'r') as f:
@@ -30,4 +30,4 @@ for book_id in biased_ids + unbiased_ids:
 book_df = pd.DataFrame(book_data)
 
 # Save the book dataframe to a CSV file
-book_df.to_csv('training_data.csv', index=False)
+#cbook_df.to_csv('training_data.csv', index=False)
