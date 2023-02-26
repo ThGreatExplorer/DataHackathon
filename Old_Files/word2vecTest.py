@@ -1,5 +1,5 @@
 from gensim.models import Word2Vec
-# import csv
+#import csv
 
 # TODO: Replace this with the dataset library
 corpus = [["the", "quick", "brown", "fox"], ["jumped", "over", "the", "lazy", "dog"]]

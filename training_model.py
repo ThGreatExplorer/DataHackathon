@@ -31,8 +31,9 @@ with open(unbiased_file, 'r') as f:
 
 book_data = []
 
-for book_id in biased_ids:
-    #try:
+# modify to compare against biased_ids and unbiased_ids
+for book_id in biased_ids + unbiased_ids:
+    try:
         # Process and Tokenize the text
         raw_book = gutenbergpy.textget.get_text_by_id(int(book_id))
         clean_book = gutenbergpy.textget.strip_headers(raw_book)
@@ -50,8 +51,8 @@ for book_id in biased_ids:
         # append list of words together into a single book's words
         book_data.append(words)
 
-    #except:
-        #print(f"Failed to fetch book with ID {book_id}")
+    except:
+        print(f"Failed to fetch book with ID {book_id}")
 
 # Concatenate all the tokenized words from all the books into a single list
 all_words = [word for book_words in book_data for word in book_words]
