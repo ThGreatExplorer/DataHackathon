@@ -30,4 +30,4 @@ model.train(corpus, total_examples=model.corpus_count, epochs=10)
 vector = model.wv["fox"]
 print(vector)
 
-model.wv.save_word2vec_format('my_model.txt', binary=False)
+model.wv.save_word2vec_format('word_vector.txt', binary=False)
