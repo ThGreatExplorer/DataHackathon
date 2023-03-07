@@ -35,5 +35,7 @@ Project was heavily influenced by: https://developers.googleblog.com/2018/04/tex
 Screenshots of the results can be found in the results folder
 
 ## How to run the program
-...
-
+1. Create a new virtual environment called Hackathon with  ```python3 -m venv Hackathon```
+2. Activate the virtual environment in the working directory with ```.\Hackathon\Scripts\activate``` (windows)
+3. Install the requirements with  ```pip install -r requirements.txt```
+4. ...
