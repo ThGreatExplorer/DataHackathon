@@ -3,7 +3,7 @@ import numpy as np
 from numpy.linalg import norm
 from sklearn.metrics.pairwise import cosine_similarity
 
-filename = "trainedmodel_word_vectors.csv"
+filename = "Data/biased_trainedmodel_word_vectors.csv"
 
 #----------------------------------------------------------------------------------------------------------------------------
 #Extract Positive Words

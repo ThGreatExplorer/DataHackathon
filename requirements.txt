@@ -1,13 +1,8 @@
 gutenbergpy 
 gensim
-gensim.downloader
 nltk
-csv
-os
-re
 pandas
-gzip
 numpy
-sklearn
+scikit-learn
 keras
 
