@@ -2,7 +2,7 @@
 - Submission for Mathwork's Responsible AI Hackathon 2023: https://northeastern-mw-hackathon.devpost.com/
     - Won Most Cross-Disciplinary Award  
     - Placed 4th overall
-- video link: https://youtu.be/5I6dWDDyJjA
+- Video link: https://youtu.be/5I6dWDDyJjA
 
 ## Team
  - Daniel Yu
