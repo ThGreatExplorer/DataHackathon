@@ -59,5 +59,5 @@ Project was heavily influenced by: https://developers.googleblog.com/2018/04/tex
 3. run ```python training_model.py```
 	1. This should export the biased file and unbiased files as csv files with the name you gave it
 4. change the path for the ```filenames = ["Data/biased_trainedmodel_word_vectors.csv", "Data/unbiased_trainedmodel_word_vectors.csv", "Data/all_trainedmodel_word_vectors.csv", "Data\GoogleNews_word_vectors.csv"]``` to the path and name of the csv files you chose
- 5. run ```python WEAT2.py```
+5. run ```python WEAT2.py```
     
