@@ -1,8 +1,6 @@
-import os
 from gensim.models import Word2Vec
 from gensim.models import KeyedVectors
 from gensim.utils import simple_preprocess
-import nltk
 import gensim.downloader as api
 import gensim
 import csv
