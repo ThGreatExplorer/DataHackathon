@@ -1,54 +1,29 @@
-When we were contemplating the possible issues we could tackle with AI ethics we landed
-on many ideas. However, we felt the topic of bias in human translation vs. AI translation 
-was an issue that is not as widely known while posing threats of large magnitude particularly 
-in academia. As we knew, the way language is used has a major impact on the message being delivered
-and wanted to see how much bias AI translators apply to texts. The first book we settled on using 
-was the Bible, which has multiple translations, but realized that the original message of the Bible 
-has been interpreted and translated in many ways so it would be difficult to decide which version
-was the “unbiased” version. We thought that there was a possibility to find a “common ground”
-message in all the translations of the Bible as a baseline, but it would not be feasible to 
-create or be of much use. However, thinking about these challenges enforced our understanding of
-how every word matters. Eventually, we settled on determining the bias of certain words by creating
-and using a natural language processor.
+## Inspiration
 
+For as long as written language has been around, the insertion of personal biases into an original message have created the world of literature as we know it today. This leads to what is known as bias, which cannot be assigned either a positive or negative connotation since the definition of what is biased is highly subjective. Language itself is inherently biased and it is and inevitably the process of translating an idea into another language will lose some of the meaning. However, the degree to which this can happen is under the responsibility of the translator, as translations can reflect the personal or cultural biases of the translator. In its most extreme case, a significantly biased translation can lead to a distorted interpretation of the source text which perpetuates stereotypes and contributes to unequal power dynamics between different cultures. The aim of this project is to mitigate the effects of these extreme cases and aid translation tools in being more accurate. It is of great importance that portrayals of literature are accurate and inclusive, and this mostly unexplored space provides tremendous room for improving upon this solution.
 
+## What it does
 
-One of the tools heavily used was Project Gutenberg which provided a large database of books that could
-be imported into python. We organized books in such a way that they fit in biased or unbiased. We catergorized
-books in the biased section if there were racist, sexist, or had any other type of discriminatory words or
-sentences used. Project Gutenberg organizes books with an Book ID, so in addition to the book titles the
-Book ID was added in parentheses next to the title.
+The Bias Detecting Machine is a WEAT analysis algorithm with a standard word sample of target and attribute words that outputs a metric for bias. It is designed to take an input of a translated text and give a score on a scale ranging from -2 to 2 with the from 0 meaning more biases. It is trained on a dataset of over 40,000 words from both biased and unbiased books 
 
-When it came to the WEAT calculation we found an online database for positive/negative associated words to use as the "Attribute Word" sets.
-Next, we used the previous Word2Vec models to get csv files which included every word in the source text along with 100 word embeddings.
-Using the source text csv file we extracted an array of all the target words we would be testing contained in the source text along with
-their vectors. Using this array along with the vectors of all the positive/negative words contained in the source text we plugged these
-arrays into the WEAT equation which took the cosine similarities of the different sets along with the standard deviation of those 
-cosine similarities to get a WEAT score, a value between 2 and -2 which represented if the target words had a positive
-or negative connotation in the source material. Ideally with this method we would be able to test different target word groups,
-such as words connected with women, men, race, or politics and then use the WEAT score to determine if those word sets had
-positive or negative connotations in the source text. Furthermore, by comparing these scores in situations such as translation, doing
-the test on a machine translation and a human translation of the same text, we could find whether the machine or human translations
-are more biased and where these biases are the same or different. 
+## How we built it
 
-To find a useful sets of target words, we looked through academically-reviewed sources to take lists of words that would include biased
-and unbiased words that the AI can be trained on. This model took great inspiration from the WEAT test shown in:
-https://developers.googleblog.com/2018/04/text-embedding-models-contain-bias.html 
+We first curated our own dataset of biased and unbiased books based on academically reviewed information. Books that were known to have strongly negative messages were added as “biased” with specific words from each being highlighted and used as the basis for our WEAT analysis. This ensures that one would be aware of and correct their word choices. We used Project Gutenberg as our source for literature to feed into the dataset. Once a book that fit our criteria was found on Project Gutenberg, the book ID was added to a list, which we repeated around 25 times for each category. The next step in creating our model was taken to python, where we created a Word2Vec model based on biased and unbiased samples, which we then extracted the word embeddings from. We then imported a pre-trained google-news-300 vector and extracted the word embeddings. From there, we were able to compare our trained W2V models to the pre-trained google-news-300 vector. We were able to interpret WEAT metric analysis results from that point forward.
 
+## Challenges we ran into
 
-One challenge that influenced the progress of our project was the parsing of data and data format 
-such that vector sizes and input shapes could be standardized so that WEAT analysis could be performed.
+There were challenges associated with setting up our structure since there were many possible approaches. One challenge that influenced the progress of our project was the parsing of data and data formats such that vector sizes and input shapes could be standardized so that WEAT analysis could be performed. [INSERT HERE]. Another challenge we faced was with the material we were choosing to be a part of our set. While it would be simpler to choose the 100 most popular books as “unbiased”, the factors that led to those books being popular, namely biases, would have an effect on our dataset as well. Finding books of varying genres and time periods helped guarantee there was not an overwhelming amount of literature of one type over others. However, it is worth noting that a vast majority of books on Project Gutenberg are public domain and therefore, on average, would be from premodern times. Creating the dataset itself gave us many opportunities to question the soundness of our project and refine our criteria over time.
 
 ## Accomplishments that we're proud of
 
-- curated own dataset of 40+ books, labeled 0 for unbias and 1 for bias
-- created own Word2Vec model based on bias and unbiased samples and mapped word embeddings
-- implemented a hard-coded WEAT analysis algorithm with a standard word sample of target and attribute words that outputs a metric for bias
-- compared against benchmark of the  
+The range of disciplines which our project was able to cover was a significant milestone for us, especially since accommodating these different disciplines was essential to the success of the outcome. 
 
 ## What we learned
 
-How to make an AI and use targeted words and language processing to determine bias in a source material using WEAT score.
+While the creation and execution of our vision was successful, there were different approaches we could have taken to reach a conclusion. 
 
+## What's next 
+
+The next steps in improving our existing data would be to create additional features that suggest words to use and more efficient procedures.
 
 
