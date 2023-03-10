@@ -32,6 +32,7 @@ Project was heavily influenced by: https://developers.googleblog.com/2018/04/tex
 		1. Randomly sampled 2000 target words from each model against attribute word pairs of each word in negative_words.txt and positive_words.txt as our standard set
 4. **Interpreted WEAT metric analysis results**
 	1. compared WEAT results of biased vs unbiased vs biased and unbiased
+**Detailed in our story here** https://drive.google.com/drive/u/0/folders/1orZPQWuP_4145IivD9gth3GF58VjbR4S 
 
 **Screenshots of the results can be found in the results folder**
 
