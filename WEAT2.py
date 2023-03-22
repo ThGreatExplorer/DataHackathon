@@ -46,27 +46,6 @@ femalewords = ["women","daughter","mother","grandmother","nurse","girl","dress",
 # Loop through each filename
 for filename in filenames:
     print("File: ", filename)
-    
-    # Open the CSV file
-    # need errors ignore for the GoogleNews csv file which has invalid characters from news articles
-    with open(filename, 'r', encoding="utf-8", errors='ignore') as csvfile:
-        # Create a CSV reader object
-        reader = csv.reader(csvfile)
-
-        # Initialize an empty list to hold the numbers
-        numbers = []
-
-        # Loop through each row in the CSV file
-        for row in reader:
-            # Loop through each item in the row
-            for item in row:
-                # If the item is a number, add it to the list
-                if (len(item) > 5 and item[3].isnumeric()):
-                    numbers.append(item)
-           
-    splitnums = []
-    for row in numbers:
-        splitnums.append(row.split(','))
 
     # ignore the warninngs raised by the improperly formatted vectors
     with warnings.catch_warnings():
