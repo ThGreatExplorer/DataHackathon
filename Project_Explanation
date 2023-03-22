@@ -1,0 +1,29 @@
+## Inspiration
+
+For as long as written language has been around, the insertion of personal biases into an original message have created the world of literature as we know it today. This leads to what is known as bias, which cannot be assigned either a positive or negative connotation since the definition of what is biased is highly subjective. Language itself is inherently biased and it is and inevitably the process of translating an idea into another language will lose some of the meaning. However, the degree to which this can happen is under the responsibility of the translator, as translations can reflect the personal or cultural biases of the translator. In its most extreme case, a significantly biased translation can lead to a distorted interpretation of the source text which perpetuates stereotypes and contributes to unequal power dynamics between different cultures. The aim of this project is to mitigate the effects of these extreme cases and aid translation tools in being more accurate. It is of great importance that portrayals of literature are accurate and inclusive, and this mostly unexplored space provides tremendous room for improving upon this solution.
+
+## What it does
+
+The Bias Detecting Machine is a WEAT analysis algorithm with a standard word sample of target and attribute words that outputs a metric for bias. It is designed to take an input of a translated text and give a score on a scale ranging from -2 to 2 with the from 0 meaning more biases. It is trained on a dataset of over 40,000 words from both biased and unbiased books 
+
+## How we built it
+
+We first curated our own dataset of biased and unbiased books based on academically reviewed information. Books that were known to have strongly negative messages were added as “biased” with specific words from each being highlighted and used as the basis for our WEAT analysis. This ensures that one would be aware of and correct their word choices. We used Project Gutenberg as our source for literature to feed into the dataset. Once a book that fit our criteria was found on Project Gutenberg, the book ID was added to a list, which we repeated around 25 times for each category. The next step in creating our model was taken to python, where we created a Word2Vec model based on biased and unbiased samples, which we then extracted the word embeddings from. We then imported a pre-trained google-news-300 vector and extracted the word embeddings. From there, we were able to compare our trained W2V models to the pre-trained google-news-300 vector. We were able to interpret WEAT metric analysis results from that point forward.
+
+## Challenges we ran into
+
+There were challenges associated with setting up our structure since there were many possible approaches. One challenge that influenced the progress of our project was the parsing of data and data formats such that vector sizes and input shapes could be standardized so that WEAT analysis could be performed. Another challenge we faced was with the material we were choosing to be a part of our set. While it would be simpler to choose the 100 most popular books as “unbiased”, the factors that led to those books being popular, namely biases, would have an effect on our dataset as well. Finding books of varying genres and time periods helped guarantee there was not an overwhelming amount of literature of one type over others. However, it is worth noting that a vast majority of books on Project Gutenberg are public domain and therefore, on average, would be from premodern times. Creating the dataset itself gave us many opportunities to question the soundness of our project and refine our criteria over time.
+
+## Accomplishments that we're proud of
+
+The range of disciplines which our project was able to cover was a significant milestone for us, especially since accommodating these different disciplines was essential to the success of the outcome. 
+
+## What we learned
+
+While the creation and execution of our vision was successful, there were different approaches we could have taken to reach a conclusion. 
+
+## What's next 
+
+The next steps in improving our existing data would be to create additional features that suggest words to use and more efficient procedures.
+
+

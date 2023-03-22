@@ -2,7 +2,7 @@
 - Submission for Mathwork's Responsible AI Hackathon 2023: https://northeastern-mw-hackathon.devpost.com/
     - Won Most Cross-Disciplinary Award  
     - Placed 4th overall
-- video link: https://youtu.be/5I6dWDDyJjA
+- Video link: https://youtu.be/5I6dWDDyJjA
 
 ## Team
  - Daniel Yu
@@ -32,6 +32,8 @@ Project was heavily influenced by: https://developers.googleblog.com/2018/04/tex
 		1. Randomly sampled 2000 target words from each model against attribute word pairs of each word in negative_words.txt and positive_words.txt as our standard set
 4. **Interpreted WEAT metric analysis results**
 	1. compared WEAT results of biased vs unbiased vs biased and unbiased
+	
+**Detailed in our story here:** https://drive.google.com/drive/u/0/folders/1orZPQWuP_4145IivD9gth3GF58VjbR4S 
 
 **Screenshots of the results can be found in the results folder**
 
@@ -59,5 +61,5 @@ Project was heavily influenced by: https://developers.googleblog.com/2018/04/tex
 3. run ```python training_model.py```
 	1. This should export the biased file and unbiased files as csv files with the name you gave it
 4. change the path for the ```filenames = ["Data/biased_trainedmodel_word_vectors.csv", "Data/unbiased_trainedmodel_word_vectors.csv", "Data/all_trainedmodel_word_vectors.csv", "Data\GoogleNews_word_vectors.csv"]``` to the path and name of the csv files you chose
- 5. run ```python WEAT2.py```
+5. run ```python WEAT2.py```
     
